@@ -1,4 +1,4 @@
-# SleepWellProject
+# Sleep Well Website Project
 # Sleep Health and Lifestyle Analysis Web App
 
 ## Table of Contents
