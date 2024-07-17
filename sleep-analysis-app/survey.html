@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Habits Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-survey">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="results.html">Results</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="survey-wrapper">
+                <div class="survey-form">
+                    <h1>Sleep Habits Survey</h1>
+                    <form id="surveyForm">
+                        <div class="form-group">
+                            <label for="bedtime">What time do you usually go to bed?</label>
+                            <input type="time" id="bedtime" name="bedtime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wakeupTime">What time do you usually wake up?</label>
+                            <input type="time" id="wakeupTime" name="wakeupTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fatigueLevel">How would you rate your fatigue level during the day?</label>
+                            <select id="fatigueLevel" name="fatigueLevel" required>
+                                <option value="low">Low</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eatingHabits">How would you describe your eating habits?</label>
+                            <select id="eatingHabits" name="eatingHabits" required>
+                                <option value="healthy">Healthy</option>
+                                <option value="average">Average</option>
+                                <option value="unhealthy">Unhealthy</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="physicalActivity">How often do you engage in physical activity?</label>
+                            <select id="physicalActivity" name="physicalActivity" required>
+                                <option value="daily">Daily</option>
+                                <option value="fewTimesAWeek">Few times a week</option>
+                                <option value="rarely">Rarely</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="screenTime">How many hours do you spend on screens (TV, computer, phone) before bed?</label>
+                            <input type="number" id="screenTime" name="screenTime" min="0" step="0.5" required>
+                        </div>
+
+                        <button type="submit">Submit Basic Survey</button>
+                    </form>
+                </div>
+                <div class="survey-image" id="surveyImage">
+                    <img src="survey_detail.png" alt="Sleep Survey Details">
+                    <div class="survey-image-overlay">
+                        <p>Click for Detailed Survey</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailedSurvey" style="display: none;">
+                <h2>Detailed Sleep Survey</h2>
+                <form id="detailedSurveyForm">
+                    <div class="form-group">
+                        <label for="gender">What is your gender?</label>
+                        <select id="gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">What is your age?</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">What is your occupation?</label>
+                        <input type="text" id="occupation" name="occupation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="averageSleep">How many hours do you sleep on average?</label>
+                        <input type="number" id="averageSleep" name="averageSleep" min="0" step="0.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sleepQuality">On a scale of 1-10, how would you rate your sleep quality?</label>
+                        <input type="range" id="sleepQuality" name="sleepQuality" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dailyActivity">How many minutes of physical activity do you do daily?</label>
+                        <input type="number" id="dailyActivity" name="dailyActivity" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stressLevel">On a scale of 1-10, how would you rate your stress level?</label>
+                        <input type="range" id="stressLevel" name="stressLevel" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bmiCategory">What is your BMI category?</label>
+                        <select id="bmiCategory" name="bmiCategory" required>
+                            <option value="normal">Normal</option>
+                            <option value="overweight">Overweight</option>
+                            <option value="obese">Obese</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bloodPressure">What is your blood pressure? (e.g., 120/80)</label>
+                        <input type="text" id="bloodPressure" name="bloodPressure" pattern="\d{2,3}/\d{2,3}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="heartRate">What is your resting heart rate?</label>
+                        <input type="number" id="heartRate" name="heartRate" min="30" max="200" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dailySteps">How many steps do you take daily on average?</label>
+                        <input type="number" id="dailySteps" name="dailySteps" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sleepDisorder">Do you have any sleep disorders?</label>
+                        <select id="sleepDisorder" name="sleepDisorder" required>
+                            <option value="none">None</option>
+                            <option value="insomnia">Insomnia</option>
+                            <option value="sleepApnea">Sleep Apnea</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Submit Detailed Survey</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

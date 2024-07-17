@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell - Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="page-results">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="results.html">Results</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Your Sleep Analysis Results</h1>
+        <div id="resultsContainer">
+            <div class="card">
+                <h2>Your Sleep Profile</h2>
+                <p>Bedtime: <span id="bedtime"></span></p>
+                <p>Wake-up Time: <span id="wakeupTime"></span></p>
+                <p>Sleep Duration: <span id="sleepDuration"></span></p>
+                <p>Fatigue Level: <span id="fatigueLevel"></span></p>
+                <p>Eating Habits: <span id="eatingHabits"></span></p>
+                <p>Physical Activity: <span id="physicalActivity"></span></p>
+                <p>Screen Time Before Bed: <span id="screenTime"></span></p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="sleepProfileChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Personalized Recommendations</h2>
+                <ul id="recommendations"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

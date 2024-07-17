@@ -1,0 +1,360 @@
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    padding-top: 5rem; /* To account for fixed navbar */
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* Styles for index.html */
+.page-index {
+    color: white;
+}
+
+.hero {
+    background-image: url('index_background1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.page-index main {
+    background-image: url('index_theme.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 80px; /* Để tránh nội dung bị che bởi thanh navigation */
+}
+
+.page-index .chart-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.page-index .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#sleepDurationChart { /* Đảm bảo biểu đồ hiển thị đúng */
+    width: 100%;
+    height: 400px;
+}
+
+.hero-content {
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    top: -20%;
+}
+
+#welcome-text {
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200; /* Có thể điều chỉnh giá trị này từ 100 đến 400 */
+    font-style: normal;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+#welcome-text span {
+    opacity: 0;
+    position: relative;
+    display: inline-block;
+    margin-right: 0.1em; /* Thêm khoảng cách giữa các ký tự */
+}
+
+#welcome-text span.visible {
+    opacity: 1;
+    text-shadow: 0 0 10px #fffacd, 0 0 20px #fffacd, 0 0 30px #fffacd, 0 0 40px #fffacd;
+    animation: glow 0.5s ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 10px #fffacd, 0 0 20px #fffacd, 0 0 30px #fffacd, 0 0 40px #fffacd;
+    }
+}
+
+/* Styles for statistics.html */
+.page-statistics {
+    background-image: url('index_theme.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.page-statistics main {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 80px;
+}
+
+.page-statistics .chart-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Styles for survey.html */
+.page-survey {
+    background-image: url('index_theme.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-survey main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 40px; /* Add some bottom padding */
+}
+
+.survey-wrapper {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1400px; /* Increased from 1200px */
+    width: 100%;
+}
+
+.survey-form {
+    flex: 1;
+    padding: 2rem;
+    max-width: 500px; /* Limit the width of the form */
+}
+
+.survey-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px; /* Ensure minimum height for the image */
+}
+
+.survey-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.survey-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.survey-image:hover .survey-image-overlay {
+    opacity: 1;
+}
+
+.survey-image-overlay p {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+/* Adjust form styles as needed */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#detailedSurvey {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .survey-wrapper {
+        flex-direction: column;
+        max-width: 800px;
+    }
+    
+    .survey-image {
+        height: auto;
+        max-height: 600px;
+    }
+
+    .survey-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .survey-image {
+        max-height: 400px;
+    }
+}
+
+/* Styles for results.html */
+.page-results {
+    background-image: url('index_theme.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.page-results main {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 80px;
+}
+
+.page-results .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.page-results .chart-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

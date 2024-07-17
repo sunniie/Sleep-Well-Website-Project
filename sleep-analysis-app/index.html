@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+    </style>
+</head>
+<body class="page-index">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="results.html">Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1 id="welcome-text"></h1>
+            <p>SleepWell is your personal sleep analysis application. We help you understand your sleep patterns and provide recommendations for better sleep quality.</p>
+        </div>
+    </div>
+
+    <main>
+        <h2>General Sleep Statistics</h2>
+        <div class="chart-container">
+            <canvas id="sleepDurationChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>Recommended Sleep Duration</h3>
+            <ul>
+                <li>Teenagers (14-17): 8-10 hours</li>
+                <li>Young adults (18-25): 7-9 hours</li>
+                <li>Adults (26-64): 7-9 hours</li>
+                <li>Older adults (65+): 7-8 hours</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
